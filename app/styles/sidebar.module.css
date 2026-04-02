@@ -1,0 +1,84 @@
+.sidebar {
+  width: 260px;
+  border-right: 1px solid #e5e5e5;
+  background: #fff;
+  height: 100%;
+}
+
+/* Header */
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px;
+  font-size: 12px;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.hideBtn {
+  background: none;
+  border: none;
+  font-size: 12px;
+  color: #888;
+  cursor: pointer;
+}
+
+/* Checkbox */
+.checkbox {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 15px;
+  border-bottom: 1px solid #e5e5e5;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+/* Section */
+.section {
+  border-bottom: 1px solid #e5e5e5;
+  padding: 12px 15px;
+}
+
+/* Section Header */
+.sectionHeader {
+  display: flex;
+  justify-content: space-between;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* Arrow */
+.arrow {
+  font-size: 12px;
+  color: #888;
+}
+
+/* Subtext */
+.subText {
+  font-size: 12px;
+  color: #888;
+  margin-top: 5px;
+}
+
+/* Dropdown */
+.sectionContent {
+  margin-top: 10px;
+}
+
+.sectionContent p {
+  font-size: 13px;
+  margin: 6px 0;
+  cursor: pointer;
+}
+
+.sectionContent p:hover {
+  color: black;
+}
+
+/* 🔥 MOBILE HIDE */
+@media (max-width: 768px) {
+  .sidebar {
+    display: none;
+  }
+}
