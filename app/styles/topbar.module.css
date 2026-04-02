@@ -1,16 +1,18 @@
+/* ================= TOP BAR ================= */
 .topBar {
   display: flex;
   justify-content: space-between;
   align-items: center;
 
-  padding: 30px 0;
+  padding: 18px 0;
 
   border-top: 1px solid #e5e5e5;
   border-bottom: 1px solid #e5e5e5;
+
   margin-bottom: 20px;
 }
 
-/* LEFT SIDE */
+/* ================= LEFT ================= */
 .leftTop {
   display: flex;
   align-items: center;
@@ -21,10 +23,11 @@
   font-size: 14px;
   font-weight: 600;
   color: #222;
-  letter-spacing: 0.3px;
+  font-weight: bold;
+
 }
 
-/* HIDE FILTER */
+/* ================= HIDE FILTER ================= */
 .hideBtn {
   background: none;
   border: none;
@@ -38,24 +41,25 @@
   display: flex;
   align-items: center;
   gap: 6px;
+  transition: 0.2s;
 }
 
 .hideBtn:hover {
   color: #000;
 }
 
-/* ARROW */
+/* ================= ARROW ================= */
 .arrow {
-  font-size: 16px;
+  font-size: 14px;
   color: #9b9b9b;
 }
 
-/* RIGHT SIDE */
+/* ================= RIGHT ================= */
 .sortWrapper {
   position: relative;
 }
 
-/* BUTTON */
+/* SORT BUTTON */
 .sortBtn {
   background: none;
   border: none;
@@ -71,67 +75,48 @@
   gap: 6px;
 }
 
-/* DROPDOWN */
+/* ================= DROPDOWN ================= */
 .dropdown {
   position: absolute;
-  top: 42px;
+  top: 40px;
   right: 0;
 
-  width: 260px;
+  width: 240px;
 
   background: #fff;
   border: 1px solid #eee;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
 
   z-index: 100;
 }
 
-/* OPTIONS */
 .dropdown p {
-  padding: 14px 18px;
+  padding: 12px 16px;
   font-size: 13px;
   color: #333;
   cursor: pointer;
 }
 
-/* HOVER */
 .dropdown p:hover {
-  background: #f7f7f7;
+  background: #f5f5f5;
 }
 
-/* ACTIVE */
 .active {
   font-weight: 600;
 }
 
+/* ================= MOBILE ================= */
 @media (max-width: 768px) {
   .topBar {
     padding: 12px 0;
   }
 
-  .leftTop {
-    gap: 0;
-  }
-
-  /* Hide item count on mobile */
-  .leftTop span {
+  /* Hide item count */
+  .items {
     display: none;
   }
 
-  /* Make FILTER look like tab */
-  .hideBtn {
-    font-size: 14px;
-    text-decoration: none;
-    color: #222;
-    font-weight: 600;
-  }
-
-  /* Remove arrow icon */
-  .hideBtn span {
-    display: none;
-  }
-
-  /* Make both sides equal width */
+  /* Layout becomes 2 equal parts */
   .topBar {
     display: flex;
   }
@@ -139,27 +124,50 @@
   .leftTop,
   .sortWrapper {
     flex: 1;
-    justify-content: center;
     display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
-  /* Divider line between FILTER & RECOMMENDED */
+  /* Divider line */
   .leftTop {
     border-right: 1px solid #e5e5e5;
   }
 
-  /* Sort button styling */
-  .sortBtn {
+  /* FILTER button */
+  .hideBtn {
     font-size: 14px;
     font-weight: 600;
+    color: #222;
+    text-decoration: none;
   }
 
-  /* Dropdown full width feel */
+  .hideBtn span {
+    display: none; /* remove arrow */
+  }
+
+  /* SORT */
+  .sortBtn {
+    font-size: 14px;
+  }
+
+.icon {
+  font-size: 16px;
+  transition: transform 0.2s ease;
+}
+
+.iconOpen {
+  transform: rotate(180deg);
+}
+
+  /* DROPDOWN FULL WIDTH */
   .dropdown {
-    width: 100vw;
-    right: 0;
+    position: absolute;
+    top: 45px;
     left: 0;
-    top: 48px;
+    right: 0;
+    width: 100%;
+
     border-left: none;
     border-right: none;
   }

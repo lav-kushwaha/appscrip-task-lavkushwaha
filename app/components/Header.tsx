@@ -15,7 +15,7 @@ export default function Header() {
       <div className={styles.topBar}>
         
         <div className={styles.leftSection}>
-          {/* ✅ Toggle menu */}
+          {/*Toggle menu */}
           <div onClick={() => setIsOpen(!isOpen)}>
             {isOpen ? (
               <FiX className={styles.menuIcon} />
@@ -51,7 +51,7 @@ export default function Header() {
         </ul>
       </nav>
 
-      {/* ✅ Mobile Menu */}
+      {/* Mobile Menu */}
       {isOpen && (
         <div className={styles.mobileMenu}>
           <ul>

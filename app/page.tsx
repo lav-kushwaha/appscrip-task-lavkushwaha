@@ -1,7 +1,5 @@
 import { getProducts } from "./lib/api";
-import ProductCard from "./components/ProductCard";
-import Sidebar from "./components/Sidebar";
-import TopBar from "./components/TopBar";
+import HomeClient from "./components/HomeClient";
 import styles from "./styles/home.module.css";
 
 export const metadata = {
@@ -15,32 +13,15 @@ export default async function Home() {
   return (
     <main className={styles.container}>
       
-      {/* Title */}
       <h1 className={styles.title}>DISCOVER OUR PRODUCTS</h1>
 
       <p className={styles.subtitle}>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident animi ratione saepe velit! Hic recusandae laboriosam voluptatem. Aliquid nam nobis eveniet tempora placeat veritatis quia non unde! Dicta, deleniti maxime!
       </p>
 
-      {/* 🔥 TOP BAR (IMPORTANT) */}
-      <TopBar />
+      {/*Client logic here */}
+      <HomeClient products={products} />
 
-      {/* Layout */}
-      <div className={styles.layout}>
-        
-        {/* Sidebar (Desktop only) */}
-        <div className={styles.sidebarWrapper}>
-          <Sidebar />
-        </div>
-
-        {/* Product Grid */}
-        <div className={styles.grid}>
-          {products.map((product: any) => (
-            <ProductCard key={product.id} product={product} />
-          ))}
-        </div>
-
-      </div>
     </main>
   );
 }

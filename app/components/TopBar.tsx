@@ -2,11 +2,11 @@
 
 import { useState } from "react";
 import styles from "../styles/topbar.module.css";
+import { FiChevronDown } from "react-icons/fi";
 
 export default function TopBar({
   showSidebar,
   toggleSidebar,
-  openSidebar,
 }: any) {
   const [sortOpen, setSortOpen] = useState(false);
 
@@ -15,15 +15,12 @@ export default function TopBar({
       
       <div className={styles.leftTop}>
         
-        {/* 📱 MOBILE FILTER */}
-        <button
-          className={styles.filterBtn}
-          onClick={openSidebar}
-        >
-          FILTER
-        </button>
+        {/* MOBILE FILTER */}
+        <p className={styles.items}>
+          3426 Items
+        </p>
 
-        {/* 💻 DESKTOP TOGGLE */}
+        {/* DESKTOP TOGGLE */}
         <button
           className={styles.hideBtn}
           onClick={toggleSidebar}
@@ -35,11 +32,11 @@ export default function TopBar({
 
       {/* SORT */}
       <div className={styles.sortWrapper}>
-        <button
-          className={styles.sortBtn}
-          onClick={() => setSortOpen(!sortOpen)}
+         <button
+        className={styles.sortBtn}
+        onClick={() => setSortOpen(!sortOpen)}
         >
-          RECOMMENDED ⌄
+        RECOMMENDED <FiChevronDown className={`${styles.icon} ${sortOpen ? styles.iconOpen : ""}`} />
         </button>
 
         {sortOpen && (

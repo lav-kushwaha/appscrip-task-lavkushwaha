@@ -1,0 +1,166 @@
+.footer {
+  background: #000;
+  color: #fff;
+  padding: 50px 60px 30px;
+  font-family: sans-serif;
+}
+
+/* ================= TOP SECTION ================= */
+.top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 80px;
+}
+
+/* LEFT */
+.top h3 {
+  font-size: 14px;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+}
+
+.top p {
+  font-size: 13px;
+  color: #aaa;
+}
+
+/* SUBSCRIBE */
+.subscribe {
+  display: flex;
+  margin-top: 20px;
+}
+
+.subscribe input {
+  width: 300px;
+  padding: 12px;
+  border: none;
+  outline: none;
+  color: #fff;
+}
+
+.subscribe input::placeholder {
+  color: #777;
+}
+
+.subscribe button {
+  padding: 12px 20px;
+  background: transparent;
+  border: 1px solid #555;
+  color: #fff;
+  cursor: pointer;
+  font-size: 12px;
+}
+
+/* RIGHT SIDE */
+.contact {
+  max-width: 250px;
+}
+
+.contact h4 {
+  margin-top: 15px;
+  font-size: 13px;
+}
+
+.contact p {
+  font-size: 13px;
+  color: #aaa;
+  margin: 5px 0;
+}
+
+/* DIVIDER */
+.divider {
+  border: none;
+  border-top: 1px solid #222;
+  margin: 40px 0;
+}
+
+/* ================= BOTTOM ================= */
+.bottom {
+  display: flex;
+  justify-content: space-between;
+  gap: 60px;
+}
+
+/* COLUMN */
+.bottom h4 {
+  font-size: 14px;
+  margin-bottom: 12px;
+}
+
+.bottom p {
+  font-size: 13px;
+  color: #aaa;
+  margin: 6px 0;
+  cursor: pointer;
+}
+
+.bottom p:hover {
+  color: #fff;
+}
+
+/* SOCIAL ICONS */
+.icons {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.icons svg {
+  font-size: 18px;
+  border: 1px solid #555;
+  padding: 6px;
+  border-radius: 50%;
+}
+
+/* PAYMENTS */
+.payments {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.payments span {
+  background: #111;
+  padding: 6px 10px;
+  font-size: 11px;
+  border-radius: 4px;
+}
+
+/* COPYRIGHT */
+.copy {
+  text-align: center;
+  font-size: 12px;
+  color: #777;
+  margin-top: 30px;
+}
+
+/* ================= MOBILE ================= */
+@media (max-width: 768px) {
+  .footer {
+    padding: 30px 20px;
+  }
+
+  .top {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .bottom {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .subscribe {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .subscribe input {
+    width: 100%;
+  }
+
+  .subscribe button {
+    width: 100%;
+  }
+}
