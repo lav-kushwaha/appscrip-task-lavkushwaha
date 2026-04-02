@@ -3,21 +3,37 @@
 import { useState } from "react";
 import styles from "../styles/topbar.module.css";
 
-export default function TopBar({ toggleSidebar }: any) {
+export default function TopBar({
+  showSidebar,
+  toggleSidebar,
+  openSidebar,
+}: any) {
   const [sortOpen, setSortOpen] = useState(false);
 
   return (
     <div className={styles.topBar}>
       
       <div className={styles.leftTop}>
-        <span>3425 ITEMS</span>
-
-        {/*Toggle sidebar */}
-        <button className={styles.hideBtn} onClick={toggleSidebar}>
-          <span>‹</span> HIDE FILTER
+        
+        {/* 📱 MOBILE FILTER */}
+        <button
+          className={styles.filterBtn}
+          onClick={openSidebar}
+        >
+          FILTER
         </button>
+
+        {/* 💻 DESKTOP TOGGLE */}
+        <button
+          className={styles.hideBtn}
+          onClick={toggleSidebar}
+        >
+          {showSidebar ? "‹ HIDE FILTER" : "› SHOW FILTER"}
+        </button>
+
       </div>
 
+      {/* SORT */}
       <div className={styles.sortWrapper}>
         <button
           className={styles.sortBtn}

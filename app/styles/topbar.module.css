@@ -3,9 +3,164 @@
   justify-content: space-between;
   align-items: center;
 
-  padding: 16px 0;
+  padding: 30px 0;
 
-  border-top: 1px solid #e5e5e5;   
+  border-top: 1px solid #e5e5e5;
   border-bottom: 1px solid #e5e5e5;
   margin-bottom: 20px;
+}
+
+/* LEFT SIDE */
+.leftTop {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+}
+
+.items {
+  font-size: 14px;
+  font-weight: 600;
+  color: #222;
+  letter-spacing: 0.3px;
+}
+
+/* HIDE FILTER */
+.hideBtn {
+  background: none;
+  border: none;
+
+  font-size: 13px;
+  color: #9b9b9b;
+
+  cursor: pointer;
+  text-decoration: underline;
+
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.hideBtn:hover {
+  color: #000;
+}
+
+/* ARROW */
+.arrow {
+  font-size: 16px;
+  color: #9b9b9b;
+}
+
+/* RIGHT SIDE */
+.sortWrapper {
+  position: relative;
+}
+
+/* BUTTON */
+.sortBtn {
+  background: none;
+  border: none;
+
+  font-size: 14px;
+  font-weight: 600;
+  color: #222;
+
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* DROPDOWN */
+.dropdown {
+  position: absolute;
+  top: 42px;
+  right: 0;
+
+  width: 260px;
+
+  background: #fff;
+  border: 1px solid #eee;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+
+  z-index: 100;
+}
+
+/* OPTIONS */
+.dropdown p {
+  padding: 14px 18px;
+  font-size: 13px;
+  color: #333;
+  cursor: pointer;
+}
+
+/* HOVER */
+.dropdown p:hover {
+  background: #f7f7f7;
+}
+
+/* ACTIVE */
+.active {
+  font-weight: 600;
+}
+
+@media (max-width: 768px) {
+  .topBar {
+    padding: 12px 0;
+  }
+
+  .leftTop {
+    gap: 0;
+  }
+
+  /* Hide item count on mobile */
+  .leftTop span {
+    display: none;
+  }
+
+  /* Make FILTER look like tab */
+  .hideBtn {
+    font-size: 14px;
+    text-decoration: none;
+    color: #222;
+    font-weight: 600;
+  }
+
+  /* Remove arrow icon */
+  .hideBtn span {
+    display: none;
+  }
+
+  /* Make both sides equal width */
+  .topBar {
+    display: flex;
+  }
+
+  .leftTop,
+  .sortWrapper {
+    flex: 1;
+    justify-content: center;
+    display: flex;
+  }
+
+  /* Divider line between FILTER & RECOMMENDED */
+  .leftTop {
+    border-right: 1px solid #e5e5e5;
+  }
+
+  /* Sort button styling */
+  .sortBtn {
+    font-size: 14px;
+    font-weight: 600;
+  }
+
+  /* Dropdown full width feel */
+  .dropdown {
+    width: 100vw;
+    right: 0;
+    left: 0;
+    top: 48px;
+    border-left: none;
+    border-right: none;
+  }
 }

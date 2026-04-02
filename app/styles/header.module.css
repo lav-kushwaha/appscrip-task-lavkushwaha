@@ -3,7 +3,6 @@
   border-bottom: 1px solid #e5e5e5;
 }
 
-/* 🔥 TOP BAR (use GRID for perfect center logo) */
 .topBar {
   display: grid;
   grid-template-columns: 1fr auto 1fr;
@@ -61,7 +60,6 @@
   font-weight: 600;
 }
 
-/* 🔥 MOBILE */
 @media (max-width: 768px) {
   .nav {
     display: none;
@@ -72,7 +70,6 @@
   }
 }
 
-/* 🔥 DESKTOP */
 @media (min-width: 769px) {
   .menuIcon {
     display: none;

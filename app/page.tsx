@@ -22,7 +22,7 @@ export default async function Home() {
         Lorem ipsum dolor sit amet consectetur adipisicing elit.
       </p>
 
-      {/* TOP BAR (IMPORTANT) */}
+      {/* 🔥 TOP BAR (IMPORTANT) */}
       <TopBar />
 
       {/* Layout */}

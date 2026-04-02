@@ -76,7 +76,7 @@
   color: black;
 }
 
-/* 🔥 MOBILE HIDE */
+/* MOBILE HIDE */
 @media (max-width: 768px) {
   .sidebar {
     display: none;
