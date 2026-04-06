@@ -1,3 +1,4 @@
+require('dotenv').config();
 import { getProducts } from "./lib/api";
 import HomeClient from "./components/HomeClient";
 import styles from "./styles/home.module.css";
